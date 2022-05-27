@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="438.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Server.ClientConnection">
+   <children>
+      <TextField fx:id="nameField" layoutX="145.0" layoutY="100.0" />
+      <TextField fx:id="ipAddress" layoutX="145.0" layoutY="163.0" text="127.0.0.1"/>
+      <Button fx:id="connectButton" layoutX="189.0" layoutY="245.0" mnemonicParsing="false" onAction="#connectToServer" text="Connect" />
+      <Label layoutX="83.0" layoutY="104.0" text="Name" />
+      <Label layoutX="73.0" layoutY="167.0" text="IP Address" />
+   </children>
+</AnchorPane>

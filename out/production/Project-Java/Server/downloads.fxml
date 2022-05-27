@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+
+<TableView fx:id="downloadTable" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Server.Downloads">
+  <columns>
+    <TableColumn fx:id="downloadFIleName" prefWidth="155.0" text="File Name" />
+    <TableColumn fx:id="downloadFileSize" prefWidth="56.0" text="Size" />
+      <TableColumn fx:id="downloadProgress" prefWidth="223.0" text="Download Progress" />
+      <TableColumn fx:id="downloadServer" prefWidth="165.0" text="Server Name" />
+  </columns>
+</TableView>

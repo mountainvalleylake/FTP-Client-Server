@@ -1,0 +1,61 @@
+Merge(A, p, q, r)
+
+01 n1 = q - p + 1
+02 n2 = r - q
+03 let L[n1 + 1] and R[n2 + 1] are 2 new arrays
+04 for i =1 to n1
+05 	L[i] = A[p + i - 1]
+06 for j = 1 to n2
+07 	R[j] = A[q+j]
+08 L[n1 + 1] = (infinity)
+09 R[n2 + 1] = (infinity)
+10 i = 1
+11 j =1
+12 for k = p to r
+13 	if L[i] <= R[j]
+14 		A[k] = L[i]
+15 		i = i + 1
+16 	else A[k] = R[j]
+17 		j = j + 1
+
+Merge-Sort(A, p, r)
+01 if p < r
+02 	q = Floor of (( p + r ) / 2)
+03 	Merge-Sort(A, p, q)
+04 	Merge-Sort(A, q+1, r)
+05 	Merge(A, p, q, r)
+
+Partition(A, p, r)
+01 x = A[r]
+02 i = p - 1
+03 for j = p to r-1
+04 	if A[j] <= x
+05 		i = i + 1
+06 		swap(A[i], A[j])
+07 swap(A[i + 1], A[r]
+08 return i + 1
+
+QuickSort(A,p,r)
+01 q = Partition(A, p, r)
+02 QuickSort(A, p, q - 1)
+03 QuickSort(A, q, r)
+
+Countng-Sort(A, B, k)
+01 let C[0..k] be a new array
+02 for i = 0 to k
+03 	c[i] = 0
+04 for j = 1 to A.length
+05 	C[A[j]] = C[A[j]] + 1
+06 //C[i] now contains the number of elements equal to i
+07 for i = 1 to k
+08 	C[i] = C[i] + C[i - 1]
+09 //C[i] now contains the number of elements less than or equal to i
+10 for j = A.length downto 1
+11 	B[C[A[j]]] = A[j]
+12 	C[A[j]] = C[A[j]] - 1
+
+Radix-Sort(A, d)
+01 for i = 1 to d
+02 	use a stable sort to sort array A on digit i
+
+Bucket-SOrt
